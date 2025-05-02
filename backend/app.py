@@ -21,33 +21,7 @@ def add_product():
     # Check for required text fields
     required_fields = ['product_type', 'origin', 'harvest_date', 'quality']
     data = {field: request.form.get(field) for field in required_fields}
-    print StowBlock {
-        block: {
-          index: block.index,
-          timestamp: block.timestamp,
-          data: block.data,
-          hash: block.hash,
-          previous_hash: block.previous_hash,
-        },
-      };
-    }
-  }
-
-  @Post("/blockchain")
-  async addToBlockChain(@Body() body: StowBlock) {
-    const block = this.blockChain.addBlock(body.block.data);
-    return {
-      message: "Product added to blockchain",
-      block: {
-        index: block.index,
-        timestamp: block.timestamp,
-        data: block.data,
-        hash: block.hash,
-        previous_hash: block.previous_hash,
-      },
-    };
-  }
-}("Received data:", data)
+    print("Received data:", data)
 
     if not all(data[field] for field in required_fields):
         print("Missing fields:", [field for field in required_fields if not data[field]])

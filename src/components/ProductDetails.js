@@ -46,7 +46,7 @@ function ProductDetails() {
       { className: 'product-details' },
       React.createElement('p', null, React.createElement('strong', null, 'Index: '), product.index),
       React.createElement('p', null, React.createElement('strong', null, 'Timestamp: '), new Date(product.timestamp * 1000).toLocaleString()),
-      React.createElement('p', null, React.createElement('strong', null förhåll: '), product.data.product_type),
+      React.createElement('p', null, React.createElement('strong', null, 'Product Type: '), product.data.product_type),
       React.createElement('p', null, React.createElement('strong', null, 'Origin: '), product.data.origin),
       React.createElement('p', null, React.createElement('strong', null, 'Harvest Date: '), product.data.harvest_date),
       React.createElement('p', null, React.createElement('strong', null, 'Quality: '), product.data.quality),
